@@ -1,0 +1,127 @@
+.familynode {
+    -fx-background-radius: 15;
+}
+
+.menu-icon{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10
+}
+
+.dragicon {
+	-fx-background-radius: 10;
+}
+
+.menu-tool{
+    -fx-background-color: radial-gradient(center 50% 50% , radius 100% , rgba(130, 255, 128, 0.41), rgb(130, 255, 128));
+}
+
+.green-gradient-right{
+    -fx-background-color: linear-gradient(to right, rgba(130, 255, 128, 0.41), rgb(130, 255, 128));
+}
+.green-gradient-left{
+    -fx-background-color: linear-gradient(to left, rgba(130, 255, 128, 0.41), rgb(130, 255, 128));
+}
+
+.blue:hover{
+    -fx-background-color: #0e29ff;
+    -fx-background-color: rgba(130, 255, 128, 0.41);
+    -fx-background-radius: 10;
+}
+.pink:hover{
+    -fx-background-color: #ff426a;
+    -fx-background-radius: 10;
+}
+
+.link-place:hover {
+    -fx-background-color: rgba(37, 255, 51, 0.42);
+
+}
+
+.icon-unknown-man{
+	-fx-background-image: url("/images/if_Father.png");
+}
+.icon-unknown-woman{
+	-fx-background-image: url("/images/if_Mother.png");
+}
+
+.icon-father{
+    -fx-background-image: url("/images/if_Father.png");
+}
+.icon-mather{
+    -fx-background-image: url("/images/if_Mother.png");
+}
+.icon-aunt{
+    -fx-background-image: url("/images/if_Aunt.png");
+}
+.icon-uncle{
+    -fx-background-image: url("/images/if_Uncle.png");
+}
+.icon-brother{
+    -fx-background-image: url("/images/if_Brother.png");
+}
+.icon-sister{
+    -fx-background-image: url("/images/if_Sister.png");
+}
+.icon-son{
+    -fx-background-image: url("/images/if_Son.png");
+}
+.icon-daughter{
+    -fx-background-image: url("/images/if_Daughter.png");
+}
+.icon-grandfather{
+    -fx-background-image: url("/images/if_Grandfather.png");
+}
+.icon-grandmother{
+    -fx-background-image: url("/images/if_Grandmother.png");
+}
+
+/***********************************************************/
+/* #0096C9  */
+
+.menu-item {
+    -fx-background-color: transparent;
+    -fx-padding: 0.333333em 0.41777em 0.333333em 0.41777em;  /* 4 5 4 5 */
+}
+.menu-item > .left-container {
+    -fx-padding: 0.458em 0.791em 0.458em 0.458em;
+}
+.menu-item > .graphic-container {
+    -fx-padding: 0em 0.333em 0em 0em;
+}
+.menu-item >.label {
+    -fx-padding: 0em 0.5em 0em 0em;
+    -fx-text-fill: -fx-text-base-color;
+}
+.menu-item:focused {
+    -fx-background: #54c92a;
+    -fx-background-color: -fx-background;
+    -fx-text-fill:  -fx-text-background-color;
+}
+.menu-item:focused > .label {
+    -fx-text-fill: -fx-focused-text-base-color;
+}
+.menu-item > .right-container {
+    -fx-padding: 0em 0em 0em 0.5em;
+}
+
+.menu-item-top{
+    -fx-background-radius: 10 10 0 0;
+}
+
+.menu-item-bottom{
+    -fx-background-radius: 0 0 10 10;
+}
+
+/********************************************/
+
+
+
+/******************************************/
+
+.tree-cell{
+    -fx-background-color: transparent;
+}
+
+.tree-view {
+    -fx-background-color: #ff426a;
+}

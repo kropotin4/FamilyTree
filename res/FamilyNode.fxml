@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="94.0" prefWidth="64.0" style="-fx-background-color: transparent;" stylesheets="@application.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="vbox_pane" prefHeight="64.0" prefWidth="64.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="top_link" prefHeight="15.0" prefWidth="200.0" styleClass="link-place" />
+            <AnchorPane prefHeight="34.0" />
+            <AnchorPane fx:id="bottom_link" prefHeight="15.0" prefWidth="200.0" styleClass="link-place" />
+         </children></VBox>
+      <Text fx:id="text" fill="#000000fb" fontSmoothingType="LCD" smooth="false" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="64.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="64.0">
+         <font>
+            <Font size="10.0" />
+         </font></Text>
+   </children>
+</fx:root>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_family_tree" default="compile.module.family_tree">
+  <dirname property="module.family_tree.basedir" file="${ant.file.module_family_tree}"/>
+  
+  <property name="module.jdk.home.family_tree" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.family_tree" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.family_tree" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.family_tree" value="-encoding UTF-8 -source 9 -target 9 ${compiler.args}"/>
+  
+  <property name="family_tree.output.dir" value="${module.family_tree.basedir}/out/production/Family Tree"/>
+  <property name="family_tree.testoutput.dir" value="${module.family_tree.basedir}/out/test/Family Tree"/>
+  
+  <path id="family_tree.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="family_tree.module.production.classpath">
+    <path refid="${module.jdk.classpath.family_tree}"/>
+  </path>
+  
+  <path id="family_tree.runtime.production.module.classpath">
+    <pathelement location="${family_tree.output.dir}"/>
+  </path>
+  
+  <path id="family_tree.module.classpath">
+    <path refid="${module.jdk.classpath.family_tree}"/>
+    <pathelement location="${family_tree.output.dir}"/>
+  </path>
+  
+  <path id="family_tree.runtime.module.classpath">
+    <pathelement location="${family_tree.testoutput.dir}"/>
+    <pathelement location="${family_tree.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.family_tree">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.family_tree">
+    <patternset refid="excluded.from.module.family_tree"/>
+  </patternset>
+  
+  <path id="family_tree.module.sourcepath">
+    <dirset dir="${module.family_tree.basedir}">
+      <include name="src"/>
+      <include name="res"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.family_tree" depends="compile.module.family_tree.production,compile.module.family_tree.tests" description="Compile module Family Tree"/>
+  
+  <target name="compile.module.family_tree.production" depends="register.custom.compilers" description="Compile module Family Tree; production classes">
+    <mkdir dir="${family_tree.output.dir}"/>
+    <javac2 destdir="${family_tree.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.family_tree}/javac">
+      <compilerarg line="${compiler.args.family_tree}"/>
+      <bootclasspath refid="family_tree.module.bootclasspath"/>
+      <classpath refid="family_tree.module.production.classpath"/>
+      <src refid="family_tree.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.family_tree"/>
+    </javac2>
+    
+    <copy todir="${family_tree.output.dir}">
+      <fileset dir="${module.family_tree.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.family_tree.basedir}/res">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.family_tree.tests" depends="register.custom.compilers,compile.module.family_tree.production" description="compile module Family Tree; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.family_tree" description="cleanup module">
+    <delete dir="${family_tree.output.dir}"/>
+    <delete dir="${family_tree.testoutput.dir}"/>
+  </target>
+</project>

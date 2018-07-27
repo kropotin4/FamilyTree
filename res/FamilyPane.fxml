@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" stylesheets="@application.css" type="javafx.scene.layout.BorderPane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="150.0" style="-fx-border-width: 0 1 0 0; -fx-border-color: green;" styleClass="green-gradient-left" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="20.0" style="-fx-border-width: 1; -fx-border-color: green; -fx-border-radius: 10;">
+               <children>
+                  <Text fx:id="per_count" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="100.0">
+                     <HBox.margin>
+                        <Insets left="3.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="7.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <TreeView fx:id="tree_view" prefHeight="345.0" prefWidth="130.0" showRoot="false" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 1; -fx-border-color: green;" stylesheets="@application.css">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="7.0" />
+               </VBox.margin></TreeView>
+            <Button fx:id="reg_button" mnemonicParsing="false" prefWidth="150.0" text="Упорядочивание" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="6.0" right="6.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children></VBox>
+   </left>
+   <top>
+      <MenuBar prefWidth="900.0" styleClass="menu-tool" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+                  <MenuItem fx:id="save" mnemonicParsing="false" text="Сохранить" />
+                  <MenuItem fx:id="load" mnemonicParsing="false" text="Загрузить" />
+                  <MenuItem fx:id="clear" mnemonicParsing="false" text="Очистить" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="close" mnemonicParsing="false" text="Закрыть" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane fx:id="root_pane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="scroll_pane" hbarPolicy="NEVER" pannable="true" style="-fx-background-color: transparent;" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <Pane fx:id="base_pane" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: rgba(130, 255, 128, 0.41);" />
+               </content>
+            </ScrollPane>
+            <VBox fx:id="right_pane" prefWidth="80.0" style="-fx-border-width: 0 0 0 1; -fx-border-color: green;" styleClass="green-gradient-right" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/if_simpline.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="24.0" right="24.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <VBox fx:id="add_pane" prefWidth="64.0" style="-fx-border-width: 1; -fx-border-color: green; -fx-border-radius: 10;">
+                     <VBox.margin>
+                        <Insets left="6.0" right="6.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children></VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</fx:root>

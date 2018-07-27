@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="130.0" stylesheets="@application.css" type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="gender_icon" fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/gender.png" />
+         </image>
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin></ImageView>
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fx:id="delete_icon" fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" styleClass="delete">
+         <image>
+            <Image url="@images/if_Trash.png" />
+         </image>
+         <HBox.margin>
+            <Insets right="5.0" />
+         </HBox.margin>
+      </ImageView>
+   </children>
+</fx:root>

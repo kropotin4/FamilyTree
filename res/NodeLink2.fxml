@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<fx:root pickOnBounds="false" stylesheets="@application.css" type="Pane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Line fx:id="node_link2" endX="100.0" startX="-100.0" stroke="#d79d2a" strokeWidth="1.5" />
+   </children>
+</fx:root>
